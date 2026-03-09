@@ -1,5 +1,8 @@
 # Anubis
-
+![Python](https://img.shields.io/badge/Python-Analysis-blue)
+![R](https://img.shields.io/badge/R-Shiny-green)
+![Bioinformatics](https://img.shields.io/badge/Field-Bioinformatics-orange)
+![License](https://img.shields.io/badge/License-GPLv3-red)
 <p align="center">
   <img src="./Figure%201.png" width="1000">
 </p>
