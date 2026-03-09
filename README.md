@@ -3,6 +3,8 @@
 <p align="center">
   <img src="Figure%201.png" width="1000">
 </p>
+**Figure 1.** Workflow of the Anubis platform showing data collection from UniProt,
+in-silico peptide digestion, peptide scoring, and interactive visualization in the Shiny dashboard.
 
 ### Ancient Egyptian Collagen Database
 
