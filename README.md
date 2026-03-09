@@ -4,7 +4,6 @@
   <img src="Figure%201.png" width="1000">
 </p>
 
-Ancient Egyptian Collagen Database
 ### Ancient Egyptian Collagen Database
 
 **Anubis** is a bioinformatics platform designed for the exploration and analysis of **collagen peptides across species**.  
