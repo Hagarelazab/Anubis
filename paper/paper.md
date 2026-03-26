@@ -1,4 +1,3 @@
-<img width="619" height="392" alt="image" src="https://github.com/user-attachments/assets/290af12b-1226-4d71-ac77-b6503cc40d90" />1) Overview
 
 Anubis: An Interactive Platform for Collagen Data of Ancient Egyptian Species
 
