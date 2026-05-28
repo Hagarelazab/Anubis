@@ -7,179 +7,216 @@
   <img src="./Figure%201.png" width="1000">
 </p>
 
-**Figure 1.** Workflow of the Anubis platform showing data collection from UniProt.
-in-silico peptide digestion, peptide scoring, and interactive visualization in the Shiny dashboard.
+# Anubis - Ancient Egyptian Collagen Database
 
-### Ancient Egyptian Collagen Database
+**Anubis** is a bioinformatics platform designed for the exploration and analysis of **collagen peptides across species**.
 
-**Anubis** is a bioinformatics platform designed for the exploration and analysis of **collagen peptides across species**.  
-The project integrates peptide datasets, computational analysis, and an interactive dashboard to study collagen peptide distribution and uniqueness in different organisms.
+The project integrates peptide datasets, computational analysis, and an interactive **R Shiny dashboard** to study collagen peptide distribution, peptide uniqueness, and species-level collagen patterns using data derived from the **UniProt Protein Database**.
 
-The platform combines **Python-based analysis pipelines** and an **R Shiny interactive dashboard** to provide researchers with tools for exploring collagen proteomics datasets derived from **UniProt**.
+![Anubis Workflow](Figure%201.png)
 
----
-
-# Project Objectives
-
-The main goals of this project are:
-
-- Analyze **collagen peptides across species**
-- Compare collagen peptide patterns between **bone and skin**
-- Identify **unique peptides per species**
-- Build a searchable **collagen peptide database**
-- Provide an **interactive visualization dashboard**
-
-This project aims to support bioinformatics research in **proteomics, peptide analysis, and species comparison**.
+**Figure 1.** Workflow of the Anubis platform showing data collection from UniProt, in-silico peptide digestion, peptide scoring, and interactive visualization in the Shiny dashboard.
 
 ---
 
-# Data Source
+## Project Objectives
+
+The main goals of this project are to:
+
+* Analyze collagen peptides across species.
+* Compare collagen peptide patterns between bone and skin.
+* Identify unique peptides per species.
+* Build a searchable collagen peptide database.
+* Provide an interactive visualization dashboard for collagen proteomics exploration.
+
+This project supports bioinformatics research in **proteomics, peptide analysis, collagen biology, and species comparison**.
+
+---
+
+## Data Source
 
 The peptide and protein datasets used in this project are derived from:
 
 **UniProt Protein Database**
 
-The datasets include processed information such as:
+The processed datasets include:
 
-- peptide to species mapping
-- peptide scoring results
-- unique peptide identification
-- species summary statistics
+* Peptide-to-species mapping.
+* Peptide scoring results.
+* Unique peptide identification.
+* Species summary statistics.
+* Bone and skin collagen peptide datasets.
 
-These datasets are stored in the `data` directory.
-
----
-
-# Platform Features
-
-## Peptide Analysis
-
-The Python notebooks perform several computational analyses including:
-
-- peptide scoring
-- species mapping
-- peptide filtering
-- identification of unique peptides
-- dataset preprocessing
-
-## Visualization
-
-The Shiny dashboard allows interactive exploration of the data through:
-
-- species distribution visualizations
-- peptide counts per species
-- protein counts per species
-- peptide existence analysis
-- species summary statistics
-
-## Data Exploration
-
-Researchers can:
-
-- search for peptides
-- explore peptide distribution across species
-- compare collagen peptide profiles between **bone and skin**
-- visualize proteomics patterns across organisms
+These datasets are stored in the `data/` directory.
 
 ---
 
-# Dashboard Components
+## Platform Features
+
+### Peptide Analysis
+
+The Python notebooks perform several computational analyses, including:
+
+* Peptide scoring.
+* Species mapping.
+* Peptide filtering.
+* Identification of unique peptides.
+* Dataset preprocessing and preparation.
+
+### Interactive Visualization
+
+The Shiny dashboard allows users to explore the processed datasets through:
+
+* Species distribution visualizations.
+* Peptide counts per species.
+* Protein counts per species.
+* Unique peptide summaries.
+* Peptide existence analysis.
+* Species-level summary statistics.
+
+### Data Exploration
+
+Researchers can use the platform to:
+
+* Search for peptides.
+* Explore peptide distribution across species.
+* Compare collagen peptide profiles between bone and skin.
+* Visualize proteomics patterns across organisms.
+* Investigate species-specific collagen peptide uniqueness.
+
+---
+
+## Dashboard Components
 
 The **Anubis Shiny Dashboard** contains several analytical sections:
 
-- **Home**
-- **Overview**
-- **Data Snapshot**
-- **Proteins per Species**
-- **Peptides per Species**
-- **Unique Peptides per Species**
-- **Peptide Existence**
-- **Existence per Species**
-- **Species Summary**
-- **Diagnostics**
+* Home
+* Overview
+* Data Snapshot
+* Proteins per Species
+* Peptides per Species
+* Unique Peptides per Species
+* Peptide Existence
+* Existence per Species
+* Species Summary
+* Diagnostics
 
 These modules allow users to explore collagen peptide datasets interactively.
 
 ---
 
-# Project Structure
+## Project Structure
 
+```text
+ANUBIS/
+├── data/
+│   ├── step2_peptide_species_map.csv
+│   ├── step2_peptides_with_species.csv
+│   ├── step3_species_summary.csv
+│   └── step3_unique_peptides_scored.csv
+│
+├── notebooks/
+│   ├── Bone.ipynb
+│   └── Skin.ipynb
+│
+├── shiny/
+│   └── app.R
+│
+├── Figure 1.png
+├── LICENSE
+└── README.md
+```
 
+---
 
-### Directory Description
+## Directory Description
 
-**data**
+### `data/`
 
-Contains processed peptide datasets used for analysis and visualization.
+Contains the processed peptide datasets used for analysis and visualization.
 
-**notebooks**
+### `notebooks/`
 
-Jupyter notebooks used for peptide analysis, including:
+Contains the Jupyter notebooks used for peptide analysis, including:
 
-- peptide scoring
-- species mapping
-- peptide filtering
-- dataset preparation
+* Peptide scoring.
+* Species mapping.
+* Peptide filtering.
+* Dataset preparation.
 
-**shiny**
+### `shiny/`
 
 Contains the **R Shiny dashboard** used for interactive data exploration.
 
 ---
 
-# Running the Analysis
+## Running the Analysis
 
-## Run the Python Notebooks
+### Run the Python Notebooks
 
 The analysis notebooks can be opened in **Jupyter Notebook** or **Google Colab**.
 
-Notebooks available:
+Available notebooks:
 
-- `notebooks/Bone.ipynb`
-- `notebooks/Skin.ipynb`
+* `notebooks/Bone.ipynb`
+* `notebooks/Skin.ipynb`
 
-These notebooks perform:
-
-- peptide scoring
-- species mapping
-- peptide filtering
-- dataset preparation
+These notebooks perform peptide scoring, species mapping, peptide filtering, and dataset preparation.
 
 ---
 
 ## Run the Shiny Dashboard
 
-To launch the interactive dashboard locally:
+To launch the interactive dashboard locally, first install the required R packages:
+
+```r
+install.packages(c(
+  "shiny", "bslib", "dplyr", "readr", "DT", "plotly", "ggplot2",
+  "stringr", "purrr", "scales", "tidyr", "htmltools", "tibble", "xml2"
+))
+```
+
+Then run the Shiny app:
 
 ```r
 shiny::runApp("shiny")
-Technologies Used
+```
 
-The project combines multiple tools commonly used in bioinformatics:
+The required CSV/XML data files should be placed in the `data/` folder.
 
-Python
+---
 
-Jupyter Notebooks
+## Technologies Used
 
-R
+This project combines multiple tools commonly used in bioinformatics and proteomics research:
 
-R Shiny
+* Python
+* Jupyter Notebook
+* R
+* R Shiny
+* UniProt Protein Database
+* Bioinformatics data processing
+* Proteomics dataset analysis
+* Interactive data visualization
 
-Bioinformatics data processing
+---
 
-Proteomics datasets
+## Authors
 
-UniProt protein database
-
-Authors
-
-Hagar Elazab
+**Hagar Elazab**
 Department of Biotechnology
 Faculty of Agriculture
 Cairo University
 
-Nawal Hassan
+**Nawal Hassan**
 Undergraduate Studies at the Department of Biotechnology
 Faculty of Agriculture
 Ain Shams University
 Cairo, Egypt
+
+---
+
+## License
+
+This project is licensed under the terms of the license included in this repository.
+
