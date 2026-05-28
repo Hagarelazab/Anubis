@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<bioml>
+  <note type="input" label="spectrum, fragment monoisotopic mass error">0.5</note>
+  <note type="input" label="spectrum, parent monoisotopic mass error plus">100</note>
+  <note type="input" label="spectrum, parent monoisotopic mass error minus">100</note>
+  <note type="input" label="spectrum, parent monoisotopic mass error units">ppm</note>
+
+  <note type="input" label="protein, cleavage site">[RK]|{P}</note>
+  <note type="input" label="scoring, maximum missed cleavage sites">2</note>
+
+  <note type="input" label="output, path">output.xml</note>
+  <note type="input" label="output, results">all</note>
+  <note type="input" label="output, proteins">yes</note>
+  <note type="input" label="output, sequences">yes</note>
+  <note type="input" label="output, spectra">yes</note>
+  <note type="input" label="output, histograms">yes</note>
+</bioml>
+
+
